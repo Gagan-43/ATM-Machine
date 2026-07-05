@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#07111f;
+    overflow:hidden;
+}
+
+.background{
+    position:fixed;
+    inset:0;
+}
+
+.glow{
+    position:absolute;
+    border-radius:50%;
+    filter:blur(120px);
+}
+
+.glow1{
+    width:400px;
+    height:400px;
+    background:#00f7ff;
+    top:-100px;
+    left:-100px;
+}
+
+.glow2{
+    width:450px;
+    height:450px;
+    background:#8b5cf6;
+    bottom:-150px;
+    right:-100px;
+}
+
+.atm-container{
+    width:420px;
+    padding:30px;
+    border-radius:30px;
+    backdrop-filter:blur(20px);
+    background:rgba(255,255,255,0.07);
+    border:1px solid rgba(255,255,255,0.15);
+    box-shadow:
+    0 20px 50px rgba(0,0,0,0.4),
+    0 0 40px rgba(0,247,255,0.2);
+    z-index:2;
+}
+
+.top-bar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:25px;
+}
+
+.logo{
+    color:white;
+    font-size:22px;
+    font-weight:600;
+    display:flex;
+    gap:10px;
+    align-items:center;
+}
+
+.card-chip{
+    width:55px;
+    height:55px;
+    border-radius:15px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#00f7ff;
+    background:rgba(255,255,255,0.08);
+    font-size:22px;
+}
+
+.balance-card{
+    padding:25px;
+    border-radius:25px;
+    background:linear-gradient(
+    135deg,
+    rgba(0,247,255,.15),
+    rgba(139,92,246,.2)
+    );
+    border:1px solid rgba(255,255,255,0.1);
+    margin-bottom:25px;
+}
+
+.balance-card p{
+    color:#a9b3c7;
+    margin-bottom:10px;
+}
+
+.balance-card h1{
+    color:white;
+    font-size:40px;
+}
+
+.actions{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:15px;
+    margin-bottom:20px;
+}
+
+.action-btn{
+    border:none;
+    border-radius:18px;
+    padding:16px;
+    cursor:pointer;
+    color:white;
+    background:rgba(255,255,255,0.08);
+    transition:.3s;
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+    align-items:center;
+    font-size:14px;
+}
+
+.action-btn i{
+    font-size:20px;
+}
+
+.action-btn:hover{
+    transform:translateY(-5px);
+    box-shadow:0 0 20px rgba(0,247,255,0.4);
+}
+
+.deposit{
+    border:1px solid rgba(0,255,170,.3);
+}
+
+.withdraw{
+    border:1px solid rgba(255,120,120,.3);
+}
+
+.history{
+    border:1px solid rgba(0,247,255,.3);
+}
+
+.input-box input{
+    width:100%;
+    padding:16px;
+    border:none;
+    outline:none;
+    border-radius:18px;
+    color:white;
+    background:rgba(255,255,255,0.08);
+    font-size:16px;
+}
+
+.input-box input::placeholder{
+    color:#95a3b8;
+}
+
+.history-panel{
+    margin-top:20px;
+    max-height:220px;
+    overflow:auto;
+}
+
+.history-panel h3{
+    color:white;
+    margin-bottom:12px;
+}
+
+.history-panel ul{
+    list-style:none;
+}
+
+.history-panel li{
+    background:rgba(255,255,255,0.06);
+    color:#dce6f7;
+    padding:12px;
+    margin-bottom:10px;
+    border-radius:12px;
+    border-left:4px solid #00f7ff;
+}
+
+.history-panel::-webkit-scrollbar{
+    width:6px;
+}
+
+.history-panel::-webkit-scrollbar-thumb{
+    background:#00f7ff;
+    border-radius:20px;
+}
+
+@media(max-width:500px){
+
+    .atm-container{
+        width:95%;
+        padding:20px;
+    }
+
+    .actions{
+        grid-template-columns:1fr;
+    }
+
+    .balance-card h1{
+        font-size:32px;
+    }
+}

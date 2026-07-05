@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GGN ATM</title>
+    <link rel="stylesheet" href="atmmachine.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+<div class="background">
+    <div class="glow glow1"></div>
+    <div class="glow glow2"></div>
+</div>
+
+<div class="atm-container">
+
+    <div class="top-bar">
+        <div class="logo">
+            <i class="fa-solid fa-building-columns"></i>
+            <span>GGN BANK</span>
+        </div>
+
+        <div class="card-chip">
+            <i class="fa-solid fa-microchip"></i>
+        </div>
+    </div>
+
+    <div class="balance-card">
+        <p>Available Balance</p>
+        <h1 id="balance">₹50,000</h1>
+    </div>
+
+    <div class="actions">
+
+        <button class="action-btn deposit">
+            <i class="fa-solid fa-arrow-down"></i>
+            Deposit
+        </button>
+
+        <button class="action-btn withdraw">
+            <i class="fa-solid fa-arrow-up"></i>
+            Withdraw
+        </button>
+
+        <button class="action-btn history">
+            <i class="fa-solid fa-clock-rotate-left"></i>
+            History
+        </button>
+
+    </div>
+
+    <div class="input-box">
+        <input type="number" id="amount" placeholder="Enter Amount">
+    </div>
+
+    <div class="history-panel" id="historyPanel">
+        <h3>Recent Transactions</h3>
+        <ul id="historyList"></ul>
+    </div>
+
+</div>
+
+<script src="atmmachine.js"></script>
+</body>
+</html>
